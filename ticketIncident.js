@@ -1,4 +1,16 @@
-//
+//eatr
+function createTicketObject(id_ticket,author,title,description,priority,status_code){
+  var obj={
+          "id":id_ticket,
+          "author":author,
+          "title":title,
+          "description":description,
+          "priority":priority,
+          "status":status_code
+          }
+   return obj;
+
+}
 function newTicket(object)
 {
   var priority_class_name;
