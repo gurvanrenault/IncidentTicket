@@ -14,7 +14,8 @@ function createTicketObject(id_ticket,author,title,description,priority,status_c
 function newTicket(object)
 {
   var priority_class_name;
-  console.log(object["priority"]);
+  var ticket_body;
+
   if (typeof(object["id"])!="number"){
     throw new TypeError("The 'id' parameter should be a number , "+typeof(object["id"])+" given");
   }
@@ -35,7 +36,11 @@ function newTicket(object)
   }
   //
   var ticket = document.createElement("ticket");
-  ticket.innerHTML = "<div class='ticket_body "+priority_class_name+"'></div>";
-  document.body.appendChild(ticket);
+  ticket.innerHTML = "<div class='ticket_body "+priority_class_name+"' id='"+object["id"]+"'></div>";
 
+  document.body.appendChild(ticket);
+  ticket_body=document.getElementById(""+object["id"]);
+  title_ticket="<div class='title_ticket'>"+object["title"]+"<div>";
+
+   ticket_body.innerHTML+=title_ticket;
 }
