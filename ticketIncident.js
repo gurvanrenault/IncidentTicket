@@ -40,7 +40,8 @@ function newTicket(object)
 
   document.body.appendChild(ticket);
   ticket_body=document.getElementById(""+object["id"]);
-  title_ticket="<div class='title_ticket'>"+object["title"]+"<div>";
+  title_ticket="<div class='title_ticket'>"+object["title"]+"</div>";
+  description_ticket="<div class='description_ticket'>"+object["description"]+"</div>";
 
-   ticket_body.innerHTML+=title_ticket;
+   ticket_body.innerHTML+=title_ticket+description_ticket;
 }
