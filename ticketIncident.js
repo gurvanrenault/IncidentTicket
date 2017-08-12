@@ -45,3 +45,13 @@ function newTicket(object)
 
    ticket_body.innerHTML+=title_ticket+description_ticket;
 }
+function deleteTicket(id)
+{
+  element=document.getElementById(id);
+  if (element==null)
+  {
+      throw "The element with the id '"+id+"' is undefined ";
+  }
+  element.parentNode.removeChild(element);
+
+}
