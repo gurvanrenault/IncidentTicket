@@ -33,11 +33,33 @@
     }
     .description_ticket
     {
+       float:left;
        width:75%;
        height:40px;
        overflow-y: hidden;
        word-wrap: break-word;
     }
+    .check_ticket
+    {
+      position: relative;
+      float: right;
+      top:-20px;
+      width: 10%;
+      text-align: center;
+      height: 100%;
+      border:solid  green;
+      border-width:thin;
+      font-size: 50px;
+    }
+.check_ticket:before {
+  content: "\2717";
+  color: white
+
+}
+  .check_ticket:hover
+  {
+    background-color: green;
+  }
   </style>
   <body>
 

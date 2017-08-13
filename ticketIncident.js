@@ -42,8 +42,12 @@ function newTicket(object)
   ticket_body=document.getElementById(""+object["id"]);
   title_ticket="<div class='title_ticket'>"+object["title"]+"</div>";
   description_ticket="<div class='description_ticket'>"+object["description"]+"</div>";
-
-   ticket_body.innerHTML+=title_ticket+description_ticket;
+  ticket_body=document.getElementById(""+object["id"]);
+  on_click_check="id='check_ticket"+object["id"]+"'";
+  check_ticket="<div class='check_ticket' "+on_click_check+" ></div>";
+  ticket_body.innerHTML+=title_ticket+description_ticket+check_ticket;
+  ticket_controller=document.getElementById("check_ticket"+object["id"]);
+  ticket_controller.addEventListener("click", function(){deleteTicket(object["id"]);}, false);
 }
 function deleteTicket(id)
 {
